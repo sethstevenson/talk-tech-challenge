@@ -1,0 +1,64 @@
+div.welcome {
+  display: none; }
+
+#content > section.error-page {
+  padding: 0 10px; }
+  #content > section.error-page h2 {
+    border: 0;
+    font-size: 3em;
+    padding: 20px 0;
+    text-align: center; }
+  #content > section.error-page h3 {
+    margin: 0; }
+  #content > section.error-page .error-message {
+    font-size: 1.2em;
+    text-align: center; }
+
+h3 {
+  font-size: 1.8em;
+  text-align: center; }
+
+div.cover {
+  background: url("404.png") no-repeat 0 0;
+  height: 214px; }
+
+div.pan {
+  -moz-animation-duration: 40s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: pan;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: pan;
+  -webkit-animation-timing-function: linear;
+  background: transparent url("corn.jpg") repeat 1055px 315px;
+  height: 214px;
+  margin: auto auto 25px 1px;
+  overflow: hidden;
+  position: relative;
+  width: 598px;
+  z-index: 0; }
+
+ol.stackTrace {
+  list-style: none;
+  margin-top: 0;
+  overflow-x: scroll; }
+
+ol.traceElements {
+  list-style: none;
+  margin: 0; }
+  ol.traceElements > li {
+    margin-left: 1em;
+    white-space: pre; }
+
+@-moz-keyframes pan {
+  0% {
+    background-position: 1055px 290px; }
+  100% {
+    background-position: left 290px; } }
+
+@-webkit-keyframes pan {
+  0% {
+    background-position: 1055px 350px; }
+  100% {
+    background-position: left 350px; } }
