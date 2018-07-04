@@ -23,7 +23,7 @@ We are challenging the developer community to have fun, show off your talents, a
 ### How do I win?
    * Fork this repo
    * Create a 404 HTML page in the /docs folder (you can make a subfolder as well).
-      * <a href="/talk-tech-challenge/old-deere-404/index.html">Take a look at our slightly "corny" one.</a> 
+      * <a href="https://johndeere.github.io/talk-tech-challenge/old-deere-404/">Take a look at our slightly "corny" one.</a> 
    * Issue a pull request with your page to this repo by 11:00 AM CST on July 24th, 2018. 
    * Winners will be announced at the <a href="https://johndeere.cvent.com/TalkTechWithDeere">"Talk Tech with Deere"</a> event at the Iowa Tap Room on July 25th, 2018. **You must be present to win**.
    * Pages will be judged on creativity and interactive features.
