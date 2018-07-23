@@ -1,0 +1,350 @@
+/**
+ * Author: Seth Stevenson
+ * Website: https://sethstevenson.net
+ * Email: sethwstevenson@gmail.com
+ */
+
+/**
+ * Layout
+ */ 
+html, body {
+    background-color: #d5d5d5;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    background: #fff;
+    margin: 0 auto;
+    max-width: 1366px;
+    height: 100%;
+}
+
+/**
+ * Header 
+ */
+header {
+    border-bottom: 1px solid #e5e6e6;
+    border-left: 12px solid #397c1e;
+    height: 80px;
+}
+
+header img {
+    border-left: 6px solid #f7db00;
+}
+
+/**
+ * Main
+ */
+.main {
+    background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    border-bottom: 40px solid #367c2b;
+    height: calc(100% - 121px); /* Header height = 81px + 40px bottom border*/
+    overflow: hidden;
+    position: relative;
+}
+
+/**
+ * John Deere Badge and Deer
+ */
+
+.main img {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+    margin-top: -226px; /* Half the height */
+    margin-left: -250px; /* Half the width */
+    z-index: 2;
+}
+.main .img-deer {
+    animation-name: deere;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes deere {
+    30% { transform: translate(1px, 1px) rotate(0deg); }
+    33% { transform: translate(-1px, -2px) rotate(-1deg); }
+    36% { transform: translate(-3px, 0px) rotate(1deg); }
+    39% { transform: translate(3px, 2px) rotate(0deg); }
+    42% { transform: translate(1px, -1px) rotate(1deg); }
+    45% { transform: translate(-1px, 2px) rotate(-1deg); }
+    48% { transform: translate(-3px, 1px) rotate(0deg); }
+    51% { transform: translate(3px, 1px) rotate(-1deg); }
+    54% { transform: translate(-1px, -1px) rotate(1deg); }
+    57% { transform: translate(1px, 2px) rotate(0deg); }
+    60% { transform: translate(1px, -2px) rotate(-1deg); }
+    61%   { left: 50%; }
+    100% { left: -750px; }
+}
+
+/**
+ * Error Message
+ */
+.error-message {
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+    position: absolute;
+        top: calc(50% - 112px);
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+}
+.error-message p {
+    margin: 10px 0;
+}
+
+.error-message .text-oh {
+    animation-name: oh-fade;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes oh-fade {
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.error-message .text-deere {
+    animation-name: deere-fade;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes deere-fade {
+    55% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.error-message .text-page-not-found {
+    animation-name: page-not-found-fade;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    font-size: 30px;
+    opacity: 0;
+}
+
+@keyframes page-not-found-fade {
+    65% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/**
+ * Clouds
+ */
+
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+    position: relative; 
+    z-index: 1;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+.cloud-1 {
+	-webkit-animation: moveclouds 45s linear infinite;
+	-moz-animation: moveclouds 45s linear infinite;
+	-o-animation: moveclouds 45s linear infinite;
+}
+
+.cloud-2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; 
+	
+	-webkit-animation: moveclouds 55s linear infinite;
+	-moz-animation: moveclouds 55s linear infinite;
+	-o-animation: moveclouds 55s linear infinite;
+}
+
+.cloud-3 {
+	left: -250px; top: 200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8;
+	
+	-webkit-animation: moveclouds 50s linear infinite;
+	-moz-animation: moveclouds 50s linear infinite;
+	-o-animation: moveclouds 50s linear infinite;
+}
+
+.cloud-4 {
+	left: 470px; top: 250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75;
+	
+	-webkit-animation: moveclouds 48s linear infinite;
+	-moz-animation: moveclouds 48s linear infinite;
+	-o-animation: moveclouds 48s linear infinite;
+}
+
+.cloud-5 {
+	left: -150px; top: 150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8;
+	
+	-webkit-animation: moveclouds 50s linear infinite;
+	-moz-animation: moveclouds 50s linear infinite;
+	-o-animation: moveclouds 50s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+/**
+ * Plants
+ */
+
+.plant {
+    position: absolute;
+    bottom: 0;
+    
+    width: 3px;
+    height: 110px;
+    background: #367c2b;
+  }
+.plant-1 {
+    left: 60px;
+}
+.plant-2 {
+    left: 140px;
+}
+.plant-3 {
+    left: 220px;
+}
+.plant-4 {
+    right: 60px;
+}
+.plant-5 {
+    right: 140px;
+}
+.plant-6 {
+    right: 220px;
+}
+
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: #367c2b;
+    animation: voaa 2s infinite alternate ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+}
+
+.leaf-1 {
+    left: 2px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    }
+.leaf-2 {
+    top: 25px;
+    left: -30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: #367c2b;
+}
+.leaf-3 {
+    top: 50px;
+    left: 2px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.leaf-4 {
+    top: 75px;
+    left: -30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+@keyframes voaa {
+    0% {transform: translateY(0px)}
+    50% {transform: translateY(2px)}
+}
+
+/**
+ * Responsive
+ */
+
+@media screen and (max-width: 520px) {
+    .main img {
+        top: 40%;
+        width: 300px;
+        margin-top: -135px; /* Half the height */
+        margin-left: -150px; /* Half the width */
+    }
+    .error-message {
+        font-size: 40px;
+        top: calc(40% - 72px);
+    }
+    .error-message .text-page-not-found {
+        font-size: 20px;
+    }
+    .plant-1 {
+        left: 25%;
+    }
+    .plant-2 {
+        left: 50%;
+    }
+    .plant-3 {
+        left: 75%;
+    }
+    .plant-4,
+    .plant-5,
+    .plant-6 {
+        display: none;
+    }
+}
