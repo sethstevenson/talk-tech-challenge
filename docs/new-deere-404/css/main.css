@@ -322,6 +322,16 @@ header img {
  */
 
 @media screen and (max-width: 520px) {
+    .main img {
+        width: 200px;
+        margin-top: -90px; /* Half the height */
+        margin-left: -100px; /* Half the width */
+        top: 120px;
+    }
+    .error-message {
+        top: 220px;
+        font-size: 50px;
+    }
     .plant-1 {
         left: 25%;
     }
